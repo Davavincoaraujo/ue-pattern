@@ -1,0 +1,34 @@
+{
+  "name": "ue-pattern",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Skill do padrão Universo Editor Adobe: consulta ao padrão, validação de componente, scaffold e validação visual (specs do Figma e de-para por imagem).",
+  "type": "module",
+  "bin": {
+    "ue-pattern": "dist/cli.js"
+  },
+  "scripts": {
+    "sync-knowledge": "node scripts/sync-knowledge.mjs",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "ue": "node dist/cli.js",
+    "gerar-adaptadores": "node scripts/gerar-adaptadores.mjs"
+  },
+  "dependencies": {
+    "pixelmatch": "^6.0.0",
+    "playwright-core": "^1.55.0",
+    "pngjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.3",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=18.20"
+  }
+}
